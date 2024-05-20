@@ -1,12 +1,11 @@
 spring:
  application:
-  name: bar-service
+  name: foo-service
  config:
   import: configserver:http://localhost:8888
  profiles:
   active: local
 
-  
 eureka:
   client:
     registryFetchIntervalSeconds: 5
@@ -20,5 +19,4 @@ eureka:
       
       
 server:
-  port: 8081
-  
+  port: 8082
