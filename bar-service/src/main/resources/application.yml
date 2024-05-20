@@ -1,11 +1,14 @@
 spring:
  application:
   name: bar-service
- cloud:
-  config:
-   uri: https://localhost:8888
+ config:
+  import: http://localhost:8888
+ profiles:
+  active: local
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+      
+      
