@@ -8,18 +8,19 @@
 		<artifactId>spring-cloud-sample</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>config-service</artifactId>
-	<name>config-service</name>
+	<artifactId>eureka-service</artifactId>
+	<name>eureka-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.1</spring-cloud.version>
 	</properties>
-
+	
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -34,5 +35,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 
 </project>
