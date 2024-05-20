@@ -5,8 +5,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/shijujohn1093/app-configuration.git
+          uri: https://github.com/shijujohn1093/spring-cloud-sample.git
           skipSslValidation: true
+          search-paths: app-configurations
   
 
 server:
