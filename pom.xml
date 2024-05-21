@@ -24,8 +24,8 @@
 	<modules>
 		<module>config-service</module>
 		<module>eureka-service</module>
+		<module>bar-service</module>
 		<module>foo-service</module>
-	    <module>bar-service</module>
 	</modules>
 
 	<dependencies>

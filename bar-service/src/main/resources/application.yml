@@ -2,7 +2,10 @@ spring:
  application:
   name: bar-service
  config:
-  import: configserver:http://localhost:8888
+  import: configserver:http://44.223.33.158:8888
+ cloud:
+  config:
+    fail-fast: false
  profiles:
   active: local
 
