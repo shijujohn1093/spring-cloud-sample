@@ -1,7 +1,7 @@
 host: 18.206.135.45
 
 server:
-  port: 8085
+  port: 9091
   
 spring:
  application:

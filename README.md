@@ -7,11 +7,10 @@ nohup java -jar config-service.jar &
 ## start other services in background
 
 nohup java -Dserver.port=8761 -jar ./eureka-service/target/*.jar &
-nohup java -Dserver.port=8761 -jar ./eureka-service/target/*.jar &
 nohup java -Dserver.port=8081 -jar ./foo-service/target/*jar &
-nohup java -Dserver.port=8089 -jar ./foo-service/target/*.jar &
-nohup java -Dserver.port=8083 -jar ./bar-service/target/*.jar &
-nohup java -Dserver.port=8084 -jar ./bar-service/target/*.jar &
+nohup java -Dserver.port=8082 -jar ./foo-service/target/*.jar &
+nohup java -Dserver.port=9091 -jar ./bar-service/target/*.jar &
+nohup java -Dserver.port=9092 -jar ./bar-service/target/*.jar &
 
 
 ## Way to access instances details from eureka service
