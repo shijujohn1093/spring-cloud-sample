@@ -1,8 +1,9 @@
 #!/bin/bash
 mvn clean install
-(setsid "java -jar ./eureka-service/target/*.jar -Dserver.port=8761" &);
+cwd=$(pwd)
+nohup java -jar $cwd+"/eureka-service/target/*.jar" -Dserver.port=8761 &
 sleep 30s
-(setsid "java -jar ./foo-service/target/*.jar -Dserver.port=8081" &);
-(setsid "java -jar ./foo-service/target/*.jar -Dserver.port=8082" &);
-(setsid "java -jar ./bar-service/target/*.jar -Dserver.port=8083" &);
-(setsid "java -jar ./bar-service/target/*.jar -Dserver.port=8084" &);
+nohup java -jar $cwd+"/foo-service/target/*.jar" -Dserver.port=8081 &
+nohup java -jar $cwd+"/foo-service/target/*.jar" -Dserver.port=8082 &
+nohup java -jar $cwd+"/bar-service/target/*.jar" -Dserver.port=8083 &
+nohup java -jar $cwd+"/bar-service/target/*.jar" -Dserver.port=8084 &
