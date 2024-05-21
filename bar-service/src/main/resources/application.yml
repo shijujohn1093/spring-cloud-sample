@@ -1,9 +1,13 @@
 host: 18.206.135.45
+
+server:
+  port: 8085
+  
 spring:
  application:
   name: bar-service
  config:
-  import: configserver:http://localhost:8888
+  import: configserver:http://${host}:8888
  cloud:
   config:
     fail-fast: false
@@ -13,9 +17,11 @@ spring:
   
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://${host}:8761/eureka/
   instance:
     preferIpAddress: true
     ip-address: ${host}
@@ -24,6 +30,5 @@ eureka:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
       
       
-server:
-  port: 8081
+
   
