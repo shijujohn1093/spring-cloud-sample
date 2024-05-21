@@ -1,5 +1,5 @@
 #!/bin/bash
-./mvn clean build
+mvn clean build
 (setsid "./config-service/run.sh" &);
 (setsid "./eureka-service/run.sh" &);
 sleep 30s
