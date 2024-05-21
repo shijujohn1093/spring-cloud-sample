@@ -1,8 +1,9 @@
+host: 18.206.135.45
 spring:
  application:
   name: foo-service
  config:
-  import: configserver:http://18.206.135.45:8888
+  import: configserver:http://${host}:8888
  cloud:
   config:
     fail-fast: false
@@ -13,9 +14,10 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://18.206.135.45:8761/eureka/
+      defaultZone: http://${host}:8761/eureka/
   instance:
     preferIpAddress: true
+    ip-address: ${host}
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
@@ -23,3 +25,6 @@ eureka:
       
 server:
   port: 8083
+  
+ 
+

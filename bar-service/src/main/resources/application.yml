@@ -1,8 +1,9 @@
+host: 18.206.135.45
 spring:
  application:
   name: bar-service
  config:
-  import: configserver:http://18.206.135.45:8888
+  import: configserver:http://${host}:8888
  cloud:
   config:
     fail-fast: false
@@ -14,7 +15,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://18.206.135.45:8761/eureka/
+      defaultZone: http://${host}:8761/eureka/
   instance:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
