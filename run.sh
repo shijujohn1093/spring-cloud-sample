@@ -1,5 +1,5 @@
 #!/bin/bash
-mvn clean build
+mvn clean install
 (setsid "java -jar ./config-service/target/*.jar -Dserver.port=8888" &);
 (setsid "java -jar ./eureka-service/target/*.jar -Dserver.port=8761" &);
 sleep 30s
