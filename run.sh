@@ -1,3 +1,4 @@
+#!/bin/bash
 #mvn clean install
 set -x #echo on
 cwd=$(pwd)
