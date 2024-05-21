@@ -18,6 +18,7 @@ eureka:
       defaultZone: http://${host}:8761/eureka/
   instance:
     preferIpAddress: true
+    ip-address: ${host}
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
