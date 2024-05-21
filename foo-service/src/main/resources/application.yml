@@ -5,7 +5,7 @@ server:
   
 spring:
  application:
-  name: bar-service
+  name: foo-service
  config:
   import: configserver:http://${host}:8888
  cloud:
