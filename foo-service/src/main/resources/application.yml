@@ -2,7 +2,7 @@ spring:
  application:
   name: foo-service
  config:
-  import: configserver:http://44.223.33.158:8888
+  import: configserver:http://18.206.135.45:8888
  cloud:
   config:
     fail-fast: false
